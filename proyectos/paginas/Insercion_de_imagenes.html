@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Inserción de imágenes en HTML</title>
+    </head>
+    <body>
+    <header>
+        <nav>
+            <a href="../llm.html">Volver al indice</a>
+            <br>
+            <a href="Comentarios_en_HTML.html">Pagina anterior</a>
+            <a href="Enlaces.html">Siguiente pagina</a>
+        </nav>
+    </header>
+        <article>
+            <h1>Inserción de imágenes en HTML</h1>
+                <ul>
+                    <li>La etiqueta <b>&lt;img&gt;</b> se utiliza para insertar imágenes en una página web.</li>
+                    <li><b>No tiene etiqueta de cierre</b>, ya que es un elemento autocerrado.</li>
+                    <li>Es esencial proporcionar información sobre la imagen para que se muestre correctamente y para mejorar la accesibilidad.</li>
+                </ul>
+            <h2>Atributos de imágenes</h2>
+                <ol>
+                <li><b>src (source):</b></li>
+                    <ul>
+                        <li>Define la <b>fuente</b> o la ruta de la imagen.</li>
+                        <li>Puede ser una ruta relativa o una URL completa.</li>
+                    </ul>
+                <li><b>alt (alternate text):</b></li>
+                    <ul>
+                        <li>Proporciona un <b>texto alternativo</b> que se muestra si la imagen no se carga o es leída por lectores de pantalla.</li>
+                        <li>Es fundamental para la <b>accesibilidad</b> y el SEO.</li>
+                    </ul>
+                <li><b>width y height:</b></li>
+                    <ul>
+                        <li>Especifican la <b>anchura</b> (width) y la <b>altura</b> (height) de la imagen en píxeles o porcentajes.</li>
+                        <li>Es importante para controlar el tamaño de la imagen en la página.</li>
+                    </ul>
+                </ol>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p>&lt;img src="imatge.jpg" alt="Descripció de l'imatge" width="400" height="300"&gt;</p>
+                        <p>&lt;img src="imatge.jpg" alt="Imatge adaptada a la pantalla" style="width: 100%;"&gt;</p>
+                        <p>&lt;img src="https://picsum.photos/300/300" alt="Imatge des d'una URL externa"&gt;</p>
+                    </td>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                        <p><b>Buenas Prácticas:</b></p>
+                            <ul>
+                                <li><b>Siempre utiliza el atributo alt</b> para garantizar una buena accesibilidad y SEO.</li><br>
+                                <li>Evita insertar imágenes muy grandes sin reducir su tamaño, ya que esto puede afectar al rendimiento de la página.</li><br>
+                                <li>Si las imágenes son responsivas (se adaptan a diferentes dispositivos), utiliza <b>porcentajes</b> en lugar de píxeles por width y height.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
