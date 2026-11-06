@@ -5,62 +5,62 @@
         <title>Enlaces en HTML</title>
     </head>
     <body>
-    <header>
-        <nav>
-        <a href="../llm.html">Volver al indice</a>
-        <br>
-        <a href="Insercion_de_imagenes.html">Pagina anterior</a>
-        </nav>
-    </header>
-    <article>
-        <h1>Enlaces en HTML</h1>
-            <ul>
-                <li>La etiqueta <b>&lt;a&gt;</b> se utiliza para crear enlaces (links) a otras páginas web, documentos, secciones dentro de la misma página o cualquier otro recurso.</li>
-                <li>El elemento esencial para los enlaces es el atributo <b>href</b> que define la URL a la cual redirigirá al usuario.</li>
-                <li>El texto entre la etiqueta de apertura y la de cierre es el que los usuarios verán y podrán clicar para ser redirigidos.</li>
-            </ul>
-        <h2>Atributos de enlaces</h2>
-            <ol>
-                <li><b>href (hypertext reference):</b></li>
-                    <ul>
-                        <li>Define la <b>URL</b> de destino del enlace.</li>
-                        <li>Puede ser un enlace absoluto (una URL completa) o relativo (camino dentro del mismo dominio).</li>
-                    </ul>
-                <li><b>target:</b>
-                    <ul>
-                        <li>Define <b>dónde se abrirá</b> el enlace: en la misma pestaña, en una nueva pestaña o en un nuevo marco.</li>
-                        <li>Los valores más habituales son:</li>
-                            <ul>
-                                <li><b>_blank:</b> Abre el enlace en una <b>nueva pestaña</b>.</li>
-                                <li><b>_self:</b> Abre el enlace en la <b>misma pestaña</b> (valor predeterminado).</li>
-                            </ul>
-                    </ul>
-            </ol>
-        <table cellpadding="5">
-            <tr>
-                <td>
-                    <p>&lt;a href="https://www.google.com"&gt;Cerca a Google&lt;/a&gt;</p>
-                    <p>&lt;a href="#capitol1"&gt;Anar al Capítol 1&lt;/a&gt;</p>
-                    <p>&lt;h2 id="capitol1"&gt;Capítol 1&lt;/h2&gt;</p>
-                    <p>&lt;a href="https://www.exemple.com" target="_blank"&gt;Obre en una nova pestanya&lt;/a&gt;</p>
-                </td>
-                <td>
-                    <h2>IMPORTANTE</h2>
-                    <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
-                        <p><b>Buenas Prácticas:</b></p>
+        <header>
+            <nav>
+                <a href="../llm.html">Volver al indice</a>
+                <br>
+                <a href="Insercion_de_imagenes.html">Pagina anterior</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Enlaces en HTML</h1>
+                <ul>
+                    <li>La etiqueta <b>&lt;a&gt;</b> se utiliza para crear enlaces (links) a otras páginas web, documentos, secciones dentro de la misma página o cualquier otro recurso.</li>
+                    <li>El elemento esencial para los enlaces es el atributo <b>href</b> que define la URL a la cual redirigirá al usuario.</li>
+                    <li>El texto entre la etiqueta de apertura y la de cierre es el que los usuarios verán y podrán clicar para ser redirigidos.</li>
+                </ul>
+            <h2>Atributos de enlaces</h2>
+                <ol>
+                    <li><b>href (hypertext reference):</b></li>
                         <ul>
-                            <li>Utiliza <b>enlaces descriptivos</b> en lugar de genéricos como "Clica aquí". Esto mejora la accesibilidad y el SEO.
-                            <ul>
-                                <li><b>Correcto:</b> "Visita la página de Contacto".</li>
-                                <li><b>Incorrecto:</b> "Clica aquí".</li>
-                            </ul>
-                            <li>Utiliza <b>target="_blank"</b> solo cuando sea realmente necesario, ya que abrir enlaces en nuevas pestañas puede confundir a algunos usuarios.</li>
-                            <li>Siempre asegúrate de que los <b>enlaces sean accesibles</b> añadiendo una descripción adecuada para usuarios con lectores de pantalla.</li>
+                            <li>Define la <b>URL</b> de destino del enlace.</li>
+                            <li>Puede ser un enlace absoluto (una URL completa) o relativo (camino dentro del mismo dominio).</li>
                         </ul>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </article>
+                    <li><b>target:</b>
+                        <ul>
+                            <li>Define <b>dónde se abrirá</b> el enlace: en la misma pestaña, en una nueva pestaña o en un nuevo marco.</li>
+                            <li>Los valores más habituales son:</li>
+                                <ul>
+                                    <li><b>_blank:</b> Abre el enlace en una <b>nueva pestaña</b>.</li>
+                                    <li><b>_self:</b> Abre el enlace en la <b>misma pestaña</b> (valor predeterminado).</li>
+                                </ul>
+                        </ul>
+                </ol>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p>&lt;a href="https://www.google.com"&gt;Cerca a Google&lt;/a&gt;</p>
+                        <p>&lt;a href="#capitol1"&gt;Anar al Capítol 1&lt;/a&gt;</p>
+                        <p>&lt;h2 id="capitol1"&gt;Capítol 1&lt;/h2&gt;</p>
+                        <p>&lt;a href="https://www.exemple.com" target="_blank"&gt;Obre en una nova pestanya&lt;/a&gt;</p>
+                    </td>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                            <p><b>Buenas Prácticas:</b></p>
+                            <ul>
+                                <li>Utiliza <b>enlaces descriptivos</b> en lugar de genéricos como "Clica aquí". Esto mejora la accesibilidad y el SEO.
+                                <ul>
+                                    <li><b>Correcto:</b> "Visita la página de Contacto".</li>
+                                    <li><b>Incorrecto:</b> "Clica aquí".</li>
+                                </ul>
+                                <li>Utiliza <b>target="_blank"</b> solo cuando sea realmente necesario, ya que abrir enlaces en nuevas pestañas puede confundir a algunos usuarios.</li>
+                                <li>Siempre asegúrate de que los <b>enlaces sean accesibles</b> añadiendo una descripción adecuada para usuarios con lectores de pantalla.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
     </body>
 </html>
