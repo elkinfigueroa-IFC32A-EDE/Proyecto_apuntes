@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Tablas en HTML</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../llm.html">Volver al indice</a>
+                <br>
+                <a href="Listas.html">Pagina anterior</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Tablas básicas con HTML</h1>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p><b>Etiqueta &lt;table&gt;:</b></p>
+                        <ul>
+                            <li>La etiqueta <b>&lt;table&gt;</b> define la tabla y actúa como el contenedor principal.</li>
+                        </ul>
+                        <p><b>Etiqueta &lt;tr&gt; (table row):</b></p>
+                        <ul>
+                            <li>Define una <b>fila</b> dentro de la tabla.</li>
+                        </ul>
+                        <p><b>Etiqueta &lt;td&gt; (table data):</b></p>
+                        <ul>
+                            <li>Crea una <b>celda</b> dentro de una fila de la tabla (datos de la tabla).</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;table&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;María&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Juan&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;30&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &lt;/table&gt;
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p><b>Atributos de Tabla:</b></p>
+                        <ul>
+                            <li><b>border:</b></li>
+                                <ul>
+                                    <li>Añade un borde a la tabla y a las celdas.</li>
+                                </ul>
+                            <li><b>cellpadding:</b></li>
+                                <ul>
+                                    <li>Define el <b>espacio</b> entre el contenido de la celda y el borde de la celda.</li>
+                                </ul>
+                            <li><b>cellspacing:</b></li>
+                                <ul>
+                                    <li>Controla el <b>espacio</b> entre las celdas de la tabla.</li>
+                                </ul>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;table border="1" cellpadding="10" cellspacing="5"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Nombre&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Edad&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Juan&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;30&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;María&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &lt;/table&gt;
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <h1>Tablas con HTML</h1>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p><b>Etiqueta &lt;thead&gt; (table head):</b></p>
+                        <ul>
+                            <li>Define el <b>encabezamiento</b> de la tabla, agrupando las filas de encabezamiento (habitualmente las que contienen &lt;th&gt;).</li>
+                        </ul>
+                        <p><b>Etiqueta &lt;tbody&gt; (table body):</b></p>
+                        <ul>
+                            <li>Agrupa el <b>cuerpo</b> de la tabla, es decir, las filas de datos. Se puede servir para separar los datos del encabezamiento.</li>
+                        </ul>
+                        <p><b>Etiqueta &lt;th&gt; (table header):</b></p>
+                        <ul>
+                            <li>Se utiliza para crear una celda de <b>encabezamiento</b> en una tabla. El texto dentro de &lt;th&gt; aparece en negrita y centrado por defecto.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;table border="1" cellpadding="10" cellspacing="5"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Producto&lt;/th&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Precio&lt;/th&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Manzana&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1€&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Plátano&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2€&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                            &lt;/table&gt;
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                            <p><b>Buenas Prácticas:</b></p>
+                            <ul>
+                                <li>Utiliza <b>&lt;thead&gt;</b> y <b>&lt;tbody&gt;</b> para organizar las tablas, especialmente en tablas más grandes, con el fin de separar claramente el encabezamiento del cuerpo de la tabla.</li><br>
+                                <li>Mantén las tablas simples para datos tabulados y utiliza CSS para el diseño más avanzado de las tablas (colores, tamaño de la fuente, etc.).</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
