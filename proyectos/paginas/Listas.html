@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Listas en HTML</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../llm.html">Volver al indice</a>
+                <br>
+                <a href="Enlaces.html">Pagina anterior</a>
+                <a href="Tablas.html">Siguiente pagina</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Listas en HTML</h1>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p><b>Listas No Ordenadas (&lt;ul&gt;):</b></p>
+                        <ul>
+                            <li>Se utilizan para listas de elementos sin un orden específico.</li>
+                            <li>Los elementos se muestran con viñetas u otros símbolos antes de cada ítem.</li>
+                            <li>Cada elemento de la lista se define con la etiqueta &lt;li&gt; (list item).</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p><b>Listas Ordenadas (&lt;ol&gt;):</b></p>
+                        <ul>
+                            <li>Se utilizan para listas en las que el orden de los elementos es relevante.</li>
+                            <li>Los elementos se numeran automáticamente (1, 2, 3, etc.).</li>
+                            <li>Cada elemento de la lista también se define con &lt;li&gt;.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            &lt;ul&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Primer ítem&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Segundo ítem&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Tercer ítem&lt;/li&gt;<br>
+                            &lt;/ul&gt;
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;ol&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Primer ítem&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Segundo ítem&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Tercer ítem&lt;/li&gt;<br>
+                            &lt;/ol&gt;
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p><b>Atributos de listas:</b></p>
+                        <ul>
+                            <li><b>Atributo type (para listas ordenadas &lt;ol&gt;):</b></li>
+                                <ul>
+                                    <li>Se puede utilizar para definir el tipo de numeración de la lista:</li>
+                                        <ul>
+                                            <li><b>1</b>: Números (predeterminado).</li>
+                                            <li><b>A</b>: Mayúsculas.</li>
+                                            <li><b>a</b>: Minúsculas.</li>
+                                            <li><b>I</b>: Números romanos en mayúsculas.</li>
+                                            <li><b>i</b>: Números romanos en minúsculas.</li>
+                                        </ul>
+                                </ul>
+                            <br>
+                            <li><b>Atributo start (para listas ordenadas &lt;ol&gt;):</b></li>
+                                <ul>
+                                    <li>Define el número o letra para comenzar la numeración.</li>
+                                </ul>
+                            <br>
+                            <li>Ejemplo:</li>
+                            <p>
+                                &lt;ol type="A"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Primer ítem&lt;/li&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Segundo ítem&lt;/li&gt;<br>
+                                &lt;/ol&gt;
+                            </p>
+                            <p>
+                                &lt;ol start="5"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Ítem número 5&lt;/li&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Ítem número 6&lt;/li&gt;<br>
+                                &lt;/ol&gt;
+                            </p>
+                        </ul>
+                    </td>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                            <p><b>Buenas Prácticas:</b></p>
+                            <ul>
+                                <li>Utiliza <b>listas no ordenadas</b> (&lt;ul&gt;) cuando el orden de los ítems no sea importante.</li><br>
+                                <li>Utiliza <b>listas ordenadas</b> (&lt;ol&gt;) cuando el orden sea relevante.</li><br>
+                                <li>Personaliza las listas según las necesidades visuales o estilísticas utilizando los atributos adecuados.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
