@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Formularios con HTML</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../llm.html">Volver al indice</a>
+                <br>
+                <a href="HTML5_y_su_evolucion.html">Pagina anterior</a>
+                <a href="Validacion_de_formularios.html">Siguiente pagina</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Formularios con HTML</h1>
+            <ul>
+                <li>Los formularios son una de las herramientas más importantes de HTML porque permiten a los usuarios <b>enviar datos a un servidor</b>.</li>
+                <li>Con HTML5, los formularios han ganado nuevas funcionalidades que mejoran su usabilidad y validación.</li>
+            </ul>
+            <table cellpadding="5" border="1">
+                <tr>
+                    <td>
+                        <p><b>Etiqueta &lt;form&gt;:</b></p>
+                        <ul>
+                            <li>Un formulario se crea con la etiqueta <b>&lt;form&gt;</b>, que actúa como el contenedor de todos los elementos de entrada (texto, botones, selecciones, etc.).</li>
+                            <li>Cada campo del formulario se envía como datos a un servidor cuando el usuario lo envía.</li>
+                        </ul>
+                    </td>
+                    <td>
+                            &lt;form action="enviar.php" method="POST"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Aquí van los campos del formulario --&gt;<br>
+                            &lt;/form&gt;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Etiqueta &lt;input&gt;:</b></p>
+                        <ul>
+                            <li>Es el elemento más versátil para crear campos de entrada.</li>
+                            <li>El tipo de campo se define con el atributo <b>type</b>.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;input type="text" name="nombre" placeholder="Escribe tu nombre"&gt;</p>
+                        <input type="text" name="nombre" placeholder="Escribe tu nombre">
+                        <p>&lt;input type="email" name="email" placeholder="Escribe tu correo electrónico"&gt;</p>
+                        <input type="email" name="email" placeholder="Escribe tu correo electrónico">
+                        <p>&lt;input type="password" name="password" placeholder="Escribe tu contraseña"&gt;</p>
+                        <input type="password" name="password" placeholder="Escribe tu contraseña">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Etiqueta &lt;label&gt;:</b></p>
+                        <ul>
+                            <li>Se utiliza para etiquetar campos de formulario y mejorar la <b>accesibilidad</b>.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;</p>
+                        <label for="nombre">Nombre:</label>
+                        <p>&lt;input type="text" id="nombre" name="nombre"&gt;</p>
+                        <input type="text" id="nombre" name="nombre">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Etiqueta &lt;textarea&gt;:</b></p>
+                        <ul>
+                            <li>Para textos largos, como comentarios o descripciones, se utiliza &lt;textarea&gt;, que permite un área de texto más grande.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;textarea name="comentario" rows="4" cols="50" placeholder="Escribe tu comentario aquí"&gt;&lt;/textarea&gt;</p>
+                        <textarea name="comentario" rows="4" cols="50" placeholder="Escribe tu comentario aquí"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Etiqueta &lt;select&gt;:</b></p>
+                        <ul>
+                            <li>&lt;select&gt; se usa para crear listas desplegables de selección.</li>
+                            <li>Cada opción dentro de la lista se define con <b>&lt;option&gt;</b>.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;label for="ciudad"&gt;Selecciona tu ciudad:&lt;/label&gt;<br>
+                            &lt;select id="ciudad" name="ciudad"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="barcelona"&gt;Barcelona&lt;/option&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="madrid"&gt;Madrid&lt;/option&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="valencia"&gt;Valencia&lt;/option&gt;<br>
+                            &lt;/select&gt;
+                        </p>
+                        <label for="ciudad">Selecciona tu ciudad:</label>
+                        <select id="ciudad" name="ciudad">
+                            <option value="barcelona">Barcelona</option>
+                            <option value="barcelona">Barcelona</option>
+                            <option value="madrid">Madrid</option>
+                            <option value="valencia">Valencia</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Atributo multiple (para &lt;select&gt;):</b></p>
+                        <ul>
+                            <li>Permite seleccionar <b>múltiples opciones</b> en una lista de selección.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;select name="intereses" multiple&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="programacion"&gt;Programación&lt;/option&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="diseno"&gt;Diseño&lt;/option&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="marketing"&gt;Márketing&lt;/option&gt;<br>
+                            &lt;/select&gt;
+                        </p>
+                        <select name="intereses" multiple>
+                            <option value="programacion">Programación</option>
+                            <option value="diseno">Diseño</option>
+                            <option value="marketing">Márketing</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Etiqueta &lt;button&gt;:</b></p>
+                        <ul>
+                            <li>Se utiliza para crear botones de envío u otras acciones dentro del formulario.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</p>
+                        <button type="submit">Enviar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Radio buttons:</b></p>
+                        <ul>
+                            <li>Permiten seleccionar <b>una opción</b> de un conjunto de posibilidades.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;label&gt;&lt;input type="radio" name="sexo" value="hombre"&gt; Hombre&lt;/label&gt;</p>
+                        <label><input type="radio" name="sexo" value="hombre"> Hombre</label>
+                        <p>&lt;label&gt;&lt;input type="radio" name="sexo" value="mujer"&gt; Mujer&lt;/label&gt;</p>
+                        <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Checkboxes:</b></p>
+                        <ul>
+                            <li>Permiten seleccionar <b>varias opciones</b> independientes.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;label&gt;&lt;input type="checkbox" name="suscripcion" value="noticias"&gt; Suscríbeme a las noticias&lt;/label&gt;</p>
+                        <label><input type="checkbox" name="suscripcion" value="noticias"> Suscríbeme a las noticias</label>
+                        <p>&lt;label&gt;&lt;input type="checkbox" name="suscripcion" value="ofertas"&gt; Suscríbeme a las ofertas&lt;/label&gt;</p>
+                        <label><input type="checkbox" name="suscripcion" value="ofertas"> Suscríbeme a las ofertas</label>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
