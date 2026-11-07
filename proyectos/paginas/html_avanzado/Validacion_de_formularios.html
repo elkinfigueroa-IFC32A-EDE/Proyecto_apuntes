@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Validación de formularios</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../llm.html">Volver al indice</a>
+                <br>
+                <a href="Formularios_con_HTML.html">Pagina anterior</a>
+                <a href="Tipos_de_entrada_especiales.html">Siguiente pagina</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Validación de Formularios</h1>
+            <ul>
+                <li>HTML5 introduce una serie de nuevos atributos y tipos de entrada para <b>validar los formularios de manera nativa</b>, sin la necesidad de JavaScript.</li>
+            </ul>
+            <table cellpadding="5" border="1">
+                <tr>
+                    <td>
+                        <p><b>Atributo required:</b></p>
+                        <ul>
+                            <li>Marca un campo como <b>obligatorio</b>.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;input type="text" name="nombre" required placeholder="Escribe tu nombre"&gt;</p>
+                        <input type="text" name="nombre" required placeholder="Escribe tu nombre">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Atributo pattern:</b></p>
+                        <ul>
+                            <li>Permite definir un patrón con <b>expresiones regulares</b> para validar la entrada del usuario.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;input type="text" name="telefono" pattern="\d{9}" placeholder="Escribe tu teléfono"&gt;</p>
+                        <input type="text" name="telefono" pattern="\d{9}" placeholder="Escribe tu teléfono">
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
