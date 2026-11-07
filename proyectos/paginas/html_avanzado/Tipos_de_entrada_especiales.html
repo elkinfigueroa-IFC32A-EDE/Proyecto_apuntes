@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Tipos de entrada especiales</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../llm.html">Volver al indice</a>
+                <br>
+                <a href="Validacion_de_formularios.html">Pagina anterior</a>
+                <a href="Multimedia_con_HTML.html">Siguiente pagina</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Tipos de Entrada Especiales</h1>
+            <ul>
+                <li>Estos tipos permiten validar y mostrar los campos de formulario de manera más adecuada según el tipo de datos que esperas obtener del usuario:</li>
+            </ul>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <ul>
+                            <li><b>&lt;input type="password"&gt;</b></li>
+                            <input type="password">
+                            <li><b>&lt;input type="email"&gt;</b></li>
+                            <input type="email">
+                            <li><b>&lt;input type="url"&gt;</b></li>
+                            <input type="url">
+                            <li><b>&lt;input type="tel"&gt;</b></li>
+                            <input type="tel">
+                            <li><b>&lt;input type="number"&gt;</b></li>
+                            <input type="number">
+                            <li><b>&lt;input type="range"&gt;</b></li>
+                            <input type="range">
+                            <li><b>&lt;input type="date"&gt;</b></li>
+                            <input type="date">
+                            <li><b>&lt;input type="time"&gt;</b></li>
+                            <input type="time">
+                            <li><b>&lt;input type="datetime-local"&gt;</b></li>
+                            <input type="datetime-local">
+                            <li><b>&lt;input type="month"&gt;</b></li>
+                            <input type="month">
+                            <li><b>&lt;input type="week"&gt;</b></li>
+                            <input type="week">
+                            <li><b>&lt;input type="color"&gt;</b></li>
+                            <input type="color">
+                            <li><b>&lt;input type="file"&gt;</b></li>
+                            <input type="file">
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;form action="enviar.php" method="POST"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="password"&gt;Contraseña:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="web"&gt;Sitio web:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="url" id="web" name="web" placeholder="Escribe la URL de tu sitio web"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="telefono"&gt;Teléfono:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="edad"&gt;Edad:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="number" id="edad" name="edad" min="0" max="100" step="1" placeholder="Escribe tu edad"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="satisfaccion"&gt;Nivel de satisfacción:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10" step="1"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nacimiento"&gt;Fecha de nacimiento:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="date" id="nacimiento" name="fecha-nacimiento"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="hora-reunion"&gt;Hora de la reunión:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="time" id="hora-reunion" name="hora-reunion"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="fecha-reunion"&gt;Fecha y hora de la reunión:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="datetime-local" id="fecha-reunion" name="fecha-reunion"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="mes"&gt;Mes preferido:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="month" id="mes" name="mes-preferido"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="semana"&gt;Semana del año:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="week" id="semana" name="semana-seleccionada"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="color"&gt;Color preferido:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="color" id="color" name="color-preferido"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="archivo"&gt;Carga un archivo:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="file" id="archivo" name="documento"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit"&gt;Enviar&lt;/button&gt;<br>
+                            &lt;/form&gt;
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <h2>Buenas Prácticas en Formularios</h2>
+            <ul>
+                <li>Aquí tienes una lista de buenas prácticas para crear formularios en HTML. Siguiendo estas recomendaciones, mejorarás la experiencia de usuario, la accesibilidad, la seguridad y la eficiencia de los formularios de tus páginas web:</li>
+            </ul>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p>
+                            &lt;fieldset&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Información Personal&lt;/legend&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nombre" name="nombre" required&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- otros campos --&gt;<br>
+                            &lt;/fieldset&gt;
+                        </p>
+                        <p>
+                            &lt;input type="email" name="email" required placeholder="Escribe tu correo electrónico" oninvalid="this.setCustomValidity('Por favor, introduce una dirección de correo válida')"&gt;
+                        </p>
+                    </td>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                            <p><b>Buenas Prácticas:</b></p>
+                            <ul>
+                                <li>Uso de la etiqueta &lt;label&gt; para mejorar la accesibilidad.</li><br>
+                                <li>Utiliza los <b>tipos de entrada</b> adecuados.</li><br>
+                                <li>Definir el atributo <b>required</b> para campos obligatorios.</li><br>
+                                <li>Añade la validación nativa con <b>pattern</b> y <b>min/max</b>.</li><br>
+                                <li>Usa <b>placeholder</b> para proporcionar pistas.</li><br>
+                                <li>Organiza los campos del formulario en <b>grupos lógicos</b> (&lt;fieldset&gt; y &lt;legend&gt;).</li><br>
+                                <li>Proporciona información clara sobre los errores.</li><br>
+                                <li>Utiliza <b>autocomplete</b> para mejorar la experiencia de usuario.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
