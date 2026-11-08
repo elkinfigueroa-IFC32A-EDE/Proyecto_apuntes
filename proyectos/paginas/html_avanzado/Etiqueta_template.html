@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Etiqueta template</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../llm.html">Volver al indice</a>
+                <br>
+                <a href="Etiqueta_hr.html">Pagina anterior</a>
+                <a href="Etiqueta_iframe.html">Siguiente pagina</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Etiqueta &lt;template&gt;</h1>
+            <ul>
+                <li>La etiqueta <b>&lt;template&gt;</b> se utiliza para definir fragmentos de HTML reutilizables que no se muestran inmediatamente cuando la página se carga.</li>
+                <li>El contenido dentro de un &lt;template&gt; no se añade al documento hasta que se manipula explícitamente con JavaScript, lo que permite crear plantillas que se pueden clonar e insertar en el DOM de manera dinámica.</li>
+                <li>Este elemento es ideal cuando quieres tener estructuras HTML preparadas que podrás añadir al documento en tiempo real, sin que estas sean renderizadas o visibles inicialmente. Esto proporciona mucha flexibilidad para aplicaciones dinámicas.</li>
+            </ul>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p>
+                            &lt;template id="miPlantilla"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="producto"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Nombre del Producto&lt;/h2&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Descripción del producto&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &lt;/template&gt;
+                        </p>
+                    </td>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                            <p><b>Buenas Prácticas:</b></p>
+                            <ul>
+                                <li><b>Mantén las plantillas simples y modulares:</b> Organiza tu código dentro de &lt;template&gt; de manera que puedas reutilizar fácilmente estas plantillas en diferentes secciones de la página.</li><br>
+                                <li><b>Clona plantillas con JavaScript:</b> La etiqueta no renderiza su contenido hasta que la invocas con JavaScript, lo que te da control total sobre cuándo y cómo se debe añadir al DOM.</li><br>
+                                <li><b>Utiliza plantillas para generar contenido dinámicamente:</b> Es muy útil en aplicaciones donde el contenido debe ser generado o actualizado en tiempo real, como listas, formularios o tarjetas de productos.</li><br>
+                                <li><b>No incluyas contenido activo dentro del template:</b> Los scripts u otros contenidos interactivos dentro del template no se ejecutarán hasta que el contenido sea añadido al DOM, así que asegúrate de añadir los elementos interactivos una vez esté en el documento.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
