@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Metadatos en HTML</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../llm.html">Volver al indice</a>
+                <br>
+                <a href="Etiqueta_iframe.html">Pagina anterior</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Metadatos en HTML</h1>
+            <ul>
+                <li>Los <b>metadatos</b> son información que se coloca dentro del documento HTML para describir características del documento como el autor, la descripción, las palabras clave o las instrucciones para motores de búsqueda y navegadores.</li>
+                <li>Los metadatos se incluyen dentro de la etiqueta &lt;head&gt; del documento HTML, pero no se muestran directamente en la página web. Estos datos ayudan a los navegadores, motores de búsqueda y aplicaciones a comprender mejor el contenido de la página.</li>
+            </ul>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p><b>Charset (Conjunto de caracteres)</b></p>
+                        <ul>
+                            <li>Define el conjunto de caracteres utilizado en el documento, como UTF-8, que soporta casi todos los caracteres.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;meta charset="UTF-8"&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Viewport (Responsive Design)</b></p>
+                        <ul>
+                            <li>Ayuda a configurar la visualización de una página web en dispositivos móviles, garantizando que el contenido se adapte correctamente a diferentes tamaños de pantalla.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Descripción de la página</b></p>
+                        <ul>
+                            <li>Proporciona una breve descripción del contenido de la página. Esta información es utilizada por los motores de búsqueda para mostrar descripciones en los resultados de búsqueda.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;meta name="description" content="Este es un sitio web que ofrece información sobre HTML5."&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Palabras clave (Keywords)</b></p>
+                        <ul>
+                            <li>Define un conjunto de palabras clave que describen el contenido de la página. Aunque actualmente no es tan utilizado por los motores de búsqueda, puede ser útil para otras aplicaciones.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;meta name="keywords" content="HTML5, desarrollo web, CSS, JavaScript"&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Autor de la página</b></p>
+                        <ul>
+                            <li>Indica el nombre del autor o empresa responsable del contenido de la página web.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;meta name="author" content="Jaume Pericàs"&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Instrucciones para Robots de Búsqueda</b></p>
+                        <ul>
+                            <li>Indica a los motores de búsqueda cómo indexar y rastrear el contenido de la página.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;meta name="robots" content="index, follow"&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Open Graph Tags (para redes sociales)</b></p>
+                        <ul>
+                            <li>Los Open Graph Tags son metadatos utilizados por las redes sociales (como Facebook o Twitter) para mostrar previsualizaciones personalizadas cuando se comparte un enlace.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;meta property="og:title" content="Título de la página"&gt;<br>
+                            &lt;meta property="og:description" content="Descripción de la página"&gt;<br>
+                            &lt;meta property="og:image" content="imagen.jpg"&gt;<br>
+                            &lt;meta property="og:url" content="https://www.ejemplo.com"&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Metadatos para aplicaciones móviles</b></p>
+                        <ul>
+                            <li>Puedes utilizar metadatos para mejorar cómo se ve la página cuando se guarda en la pantalla de inicio de un dispositivo móvil.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;link rel="apple-touch-icon" href="icon.png"&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Favicon</b></p>
+                        <ul>
+                            <li>Aunque no es un &lt;meta&gt;, el favicon es un metadato visual importante que se muestra en la pestaña del navegador.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>lang (atributo)</b></p>
+                        <ul>
+                            <li>El atributo <b>lang</b> se define dentro de la etiqueta &lt;html&gt; para especificar el idioma general de la página, o dentro de cualquier otra etiqueta HTML para marcar un idioma específico dentro de una parte del contenido.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="es"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            &lt;/html&gt;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                            <p><b>Buenas Prácticas para el Uso de Metadatos en HTML:</b></p>
+                            <ul>
+                                <li>Utiliza el conjunto de caracteres <b>UTF-8</b> para garantizar que todos los caracteres especiales se muestren correctamente en todos los dispositivos y navegadores.</li><br>
+                                <li>Incluye una <b>descripción</b> relevante de la página para ayudar a los motores de búsqueda a comprender mejor el contenido y mejorar tu clasificación.</li><br>
+                                <li>Optimiza para móviles utilizando la etiqueta <b>viewport</b> para asegurar que la página se adapte correctamente a diferentes dispositivos.</li><br>
+                                <li>Incluye <b>Open Graph Tags</b> si quieres que tu página se muestre de manera atractiva cuando se comparta en redes sociales.</li><br>
+                                <li>Utiliza metadatos de <b>robots</b> para controlar cómo quieres que los motores de búsqueda indexen o no indexen tu página.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>

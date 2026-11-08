@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Etiqueta iframe</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../llm.html">Volver al indice</a>
+                <br>
+                <a href="Etiqueta_template.html">Pagina anterior</a>
+                <a href="Metadatos_en_HTML.html">Siguiente pagina</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Etiqueta &lt;iframe&gt;</h1>
+            <ul>
+                <li><b>&lt;iframe&gt;</b> (inline frame) es una etiqueta HTML que permite insertar una página HTML dentro de otra página web. Es una manera más moderna y segura de incrustar contenido externo, como otras páginas web, vídeos, formularios o mapas, dentro de una página principal.</li>
+                <li>Los iframes se utilizan a menudo para contenidos dinámicos como vídeos de YouTube, Google Maps o integraciones de servicios externos.</li>
+                <li>La etiqueta &lt;iframe&gt; se define dentro del cuerpo del documento y se puede personalizar con atributos como <b>width</b>, <b>height</b>, <b>src</b> y <b>frameborder</b>.</li>
+            </ul>
+            <table cellpadding="1">
+                <tr>
+                    <td>
+                        <p>
+                            &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ID_VIDEO"<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+                        </p>
+                    </td>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                            <p><b>Buenas Prácticas:</b></p>
+                            <ul>
+                                <li><b>Evita el uso excesivo de iframes:</b> El uso excesivo de iframes puede hacer que la página sea más lenta y más difícil de gestionar. Utilízalos solo cuando sea necesario (como para incrustar contenido externo).</li><br>
+                                <li><b>Utiliza el atributo sandbox por seguridad:</b> Cuando incrustas contenido de otros sitios, utiliza el atributo sandbox para limitar las acciones que el iframe puede realizar dentro de tu sitio web, mejorando la seguridad.</li><br>
+                                <li><b>Optimiza el alto y el ancho:</b> Ajusta el tamaño del iframe para asegurarte de que el contenido se vea correctamente en todos los tamaños de pantalla, especialmente en dispositivos móviles.</li><br>
+                                <li><b>Utiliza alternativas cuando sea posible:</b> Cuando solo necesites cargar contenido dinámico que puedes generar tú mismo (como un vídeo o una imagen), considera cargarlo directamente en la página en lugar de utilizar un iframe.</li><br>
+                                <li><b>Utiliza allowfullscreen para vídeos:</b> Si estás incrustando vídeos, permite que se puedan visualizar en pantalla completa con el atributo allowfullscreen para mejorar la experiencia del usuario.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
