@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Multimedia con HTML</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../../llm.html">Volver al indice</a>
+                <br>
+                <a href="Tipos_de_entrada_especiales.html">Pagina anterior</a>
+                <a href="Etiqueta_center.html">Siguiente pagina</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Multimedia con HTML</h1>
+            <ul>
+                <li>HTML5 ha introducido maneras nuevas y eficientes de integrar multimedia en las páginas web, incluyendo imágenes, vídeos y audio <b>sin necesidad de plug-ins externos</b> como Flash.</li>
+                <li>Esto ha mejorado tanto la compatibilidad como la usabilidad en múltiples dispositivos, especialmente en móviles.</li>
+            </ul>
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        <p><b>Imágenes en HTML</b></p>
+                        <ul>
+                            <li>La etiqueta <b>&lt;img&gt;</b> se utiliza para insertar imágenes en una página web.</li>
+                            <li>Esta etiqueta es autocerrada (no tiene etiqueta de cierre).</li>
+                            <li><b>src:</b> Especifica la ruta de la imagen.</li>
+                            <li><b>alt:</b> Proporciona un texto alternativo para la imagen, útil para la accesibilidad y el SEO.</li>
+                            <li><b>width</b> y <b>height:</b> Controlan el tamaño de la imagen.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>&lt;img src="imagen.png" alt="Descripción de la imagen" width="300" height="200"&gt;</p>
+                        <img src="../../../i/imagen.png" alt="Descripción de la imagen" width="300" height="200">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Vídeos en HTML5 (etiqueta &lt;video&gt;)</b></p>
+                        <ul>
+                            <li>HTML5 introduce la etiqueta <b>&lt;video&gt;</b> para insertar vídeos de manera nativa en la página web, sin necesidad de plug-ins externos.</li>
+                            <li><b>src:</b> Ruta del archivo de vídeo.</li>
+                            <li><b>controls:</b> Muestra los controles del vídeo (play, pause, volumen, etc.).</li>
+                            <li><b>autoplay:</b> Hace que el vídeo se reproduzca automáticamente cuando se carga la página.</li>
+                            <li><b>loop:</b> Hace que el vídeo se reproduzca en bucle.</li>
+                            <li><b>muted:</b> Reproduce el vídeo sin sonido.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;video src="video.mp4" controls width="400" height="300"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Tu navegador no soporta el vídeo.<br>
+                            &lt;/video&gt;
+                        </p>
+                        <video src="../../../i/video.mp4" controls width="400" height="300">Tu navegador no soporta el vídeo.</video>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Audio en HTML5 (etiqueta &lt;audio&gt;)</b></p>
+                        <ul>
+                            <li>De manera similar a los vídeos, HTML5 permite insertar audio nativo con la etiqueta <b>&lt;audio&gt;</b>.</li>
+                            <li><b>src:</b> Ruta del archivo de audio.</li>
+                            <li><b>controls:</b> Muestra los controles de reproducción de audio (play, pause, volumen, etc.).</li>
+                            <li><b>autoplay:</b> Reproduce automáticamente el audio al cargar la página.</li>
+                            <li><b>loop:</b> Hace que el audio se reproduzca en bucle.</li>
+                            <li><b>muted:</b> Reproduce el audio sin sonido inicialmente.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>
+                            &lt;audio src="audio.mp3" controls&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Tu navegador no soporta el audio.<br>
+                            &lt;/audio&gt;
+                        </p>
+                        <audio src="../../../i/audio.mp3" controls>Tu navegador no soporta el audio.</audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>IMPORTANTE</h2>
+                        <div style="background-color: yellow; border: 1px solid black; border-radius: 5%; padding: 5px 5px;">
+                            <p><b>Buenas Prácticas para Integrar Multimedia:</b></p>
+                            <ul>
+                                <li>Proporciona formatos de archivo compatibles con los diferentes navegadores para audio y vídeo (como MP4, WebM, OGG).</li><br>
+                                <li>Utiliza el atributo <b>alt</b> para las imágenes para mejorar la accesibilidad y optimizar el SEO.</li><br>
+                                <li>No hagas uso del atributo <b>autoplay</b> en audio y vídeo, ya que puede interrumpir la experiencia del usuario, especialmente en dispositivos móviles.</li><br>
+                                <li>Controla el tamaño de los archivos multimedia para evitar tiempos de carga largos y mejorar la experiencia del usuario.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </body>
+</html>
