@@ -10,15 +10,15 @@
 			<nav>
                 <div class="izquierda">
                     <a href="../../llm.html">
-                        <div>Volver al indice</div>
+                        <div class="cajaoarticle">Volver al indice</div>
                     </a>
                     <a href="Introduccion_al_CSS.html">
-                        <div>Pagina anterior</div>
+                        <div class="cajaoarticle">Pagina anterior</div>
                     </a>
                 </div>
                 <div class="derecha">
                     <a href="Sintaxis_basica_del_CSS.html">
-                        <div>Pagina siguiente</div>
+                        <div class="cajaoarticle">Pagina siguiente</div>
                     </a>
                 </div>
             </nav>
@@ -26,13 +26,107 @@
         <section>
             <h1>Aplicacion de estilos</h1>
             <p>El CSS se puede aplicar a un documento HTML de tres formas principales: online, incrustado (dentro del HTML) y externo (mediante un archivo CSS separado). Cada una de estas formas tiene sus propósitos y usos.</p>
-            <article>
+            <article class="cajaoarticle">
                 <h3>1. Estilos enlinea (Inline styles)</h3>
                 <p>Los estilos online se aplican directamente a un elemento HTML, utilizando el atributo style dentro de la misma etiqueta de el elemento. Este método es adecuado para aplicar estilos a un solo elemento de forma rápida, pero no es recomendable para páginas grandes, dificultando la mantenibilidad.</p>
                 <div class="ejemplo">
                     <p>&lt;p style=&quot;color: red; font-size: 20px;&quot;&gt;Aquest és un paràgraf amb estils en línia.&lt;/p&gt;</p>
                 </div>
+                <div class="comparativa">
+                    <div class="ejemplo">
+                        <h3>Ventajas:</h3>
+                        <ol>
+                            <li>Aplicación rápida y directa en el elemento.</li>
+                        </ol>
+                    </div>
+                    <div class="ejemplo">
+                        <h3>Inconvenientes:</h3>
+                        <ol>
+                            <li>Dificulta la mantenibilidad en sitios webs grandes porque debería aplicarse el estilo en cada elemento manualmente.</li>
+                            <li>No aprovecha la capacidad de reutilizar los estilos.</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+            <article class="cajaoarticle">
+                <h3>2. Estilos incrustados (Embedded styles)</h3>
+                <p>Los estilos incrustados se colocan dentro de la sección &lt;head&gt; de un documento HTML, dentro de una etiqueta &lt;style&gt;. Estos estilos se aplican a todos los elementos HTML de la página actual.</p>
+                <div id="casosespeciales2">
+                    <div class="ejemplo ejemplo1">
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="es"&gt;<br>
+                            &lt;head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Estilos incrustados&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 18px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Este es un título centrado&lt;/h1&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Este párrafo tendrá texto de color azul y tamaño 18 píxeles.&lt;/p&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </p>
+                    </div>
+                    <div class="ejemplo">
+                        <h3>Ventajas:</h3>
+                        <ol>
+                            <li>Más eficiente que los estilos en línea, ya que se pueden aplicar estilos a diversos elementos de una misma página desde un solo lugar.</li>
+                        </ol>
+                    </div>
+                    <div class="ejemplo ejemplo3">
+                        <h3>Inconvenientes:</h3>
+                        <ol>
+                            <li>Solo afecta a la página donde se aplica, no se reutiliza entre varias páginas.</li>
+                            <li>Si la página crece demasiado, puede hacer más difícil la lectura y el mantenimiento.</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+            <article class="cajaoarticle">
+                <h3>3. Estilos externos (External stylesheets)</h3>
+                <p>Los estilos externos se almacenan en un archivo CSS separado y se enlazan al documento HTML utilizando la etiqueta &lt;link&gt; dentro de la sección &lt;head&gt;. Este es el método más recomendado para la mayoría de los sitios web, especialmente si constan de múltiples páginas.</p>
+                <div class="comparativa">
+                    <div class="ejemplo">
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="es"&gt;<br>
+                            &lt;head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Estilos externos&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Bienvenidos a mi sitio web&lt;/h1&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Este párrafo tendrá texto verde y tamaño 16 píxeles.&lt;/p&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </p>
+                    </div>
+                    <div class="ejemplo">
+                        <p>
+                            p {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 16px;<br>
+                            }<br>
+                            <br>
+                            h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: darkblue;<br>
+                            }
+                        </p>
+                    </div>
+                </div>
             </article>
         </section>
     </body>
 </html>
+
