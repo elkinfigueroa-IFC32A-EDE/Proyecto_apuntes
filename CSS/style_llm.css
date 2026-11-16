@@ -21,7 +21,7 @@ a{
 }
 
 .texto{
-    font-size: 18px;
+    font-size: 100%;
     padding-left: 20px;
     padding-right: 15px;
     margin: 0;
@@ -40,7 +40,7 @@ h3{
     border-radius: 15px;
     color: #01161E;
     background-color: #AEC3B0;
-    height: 100px;
+    padding-bottom: 25px;
 }
 
 .caja:hover p{
