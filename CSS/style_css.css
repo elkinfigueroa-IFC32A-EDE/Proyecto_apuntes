@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+body{
+    background-color: #124559;
+    transition: all 2 ease-in;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    display: flex;
+    background-color: #598392;
+    justify-content: center;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+
+div{
+    background-color: #AEC3B0;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+article{
+    background-color: #598392;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 15px;
+}
