@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+article{
+    background-color: #598392;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 15px;
+    opacity: 0;
+    animation: aparecer 0.8s ease-out forwards;
+}
+
+nav{
+    display: flex;
+    background-color: #598392;
+    justify-content: center;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    justify-content: space-between;
+    opacity: 0;
+    animation: aparecer 0.8s ease-out forwards;
+}
+
+div{
+    background-color: #AEC3B0;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 15px;
+    opacity: 0;
+    animation: aparecer 0.8s ease-out forwards;
+}
+
+.derecha{
+    display: flex;
+    opacity: 0;
+    margin: 0;
+    padding: 0px;
+}
+
+.izquierda{
+    display: flex;
+    opacity: 0;
+    margin: 0;
+    padding: 0px;
+}
+
+body{
+    background-color: #124559;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    color: #EFF6E0;
+    margin-bottom: 10px;
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+li{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ol{
+    padding: 0px 15px 0px 15px;
+    text-align: justify;
+}
+
+.caja:nth-child(1) { animation-delay: 0.1s; }
+.caja:nth-child(2) { animation-delay: 0.3s; }
+.caja:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
