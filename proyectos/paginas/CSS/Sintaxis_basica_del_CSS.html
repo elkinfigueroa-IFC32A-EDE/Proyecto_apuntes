@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introducción al CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../../CSS/stylecss_section.css">
+    </head>
+    <body>
+        <header>
+			<nav>
+                <div class="izquierda">
+                    <a href="../../llm.html">
+                        <div class="cajaoarticle">Volver al indice</div>
+                    </a>
+                    <a href="Aplicacion_de_estilos.html">
+                        <div class="cajaoarticle">Pagina anterior</div>
+                    </a>
+                </div>
+                <div class="derecha">
+                    <a href="Propiedades_de_texto_y_fuentes.html">
+                        <div class="cajaoarticle">Pagina siguiente</div>
+                    </a>
+                </div>
+            </nav>
+		</header>
+        <section>
+            <h1>Sintaxis basica del CSS</h1>
+            <article class="cajaoarticle">
+                <div class="comparativa">
+                    <div class="ejemplo">
+                        <img src="../../../i/EjemploSintaxis.png">
+                    </div>
+                    <div class="ejemplo">
+                        <ol>
+                                <li><b>Regla CSS:</b> es una instrucción que define como se debe aplicar un estilo a uno o más elementos HTML dentro de una página web.</li>
+                                <li><b>Selector:</b> Indica el elemento HTML al que se aplicarán los estilos.</li>
+                                <li><b>Propiedad:</b> Define la característica que quieres modificar (como el color, el tamaño del texto, el margen, etc.).</li>
+                                <li><b>Valor:</b> Asigna un valor específico a la propiedad (tales como "azul" para el color, "16px" para el tamaño del texto, etc.).</li>
+                                <li><b>Declaración CSS</b> es una instrucción dentro de una regla CSS que define una característica específica de estilo para un elemento HTML.</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article class="cajaoarticle">
+                <h2>Selectores en CSS</h2>
+                <p>Los selectores son una parte fundamental del CSS porque definen qué elementos HTML serán afectados por las reglasde estilo. Existen varios tipos de selectores, pero los más comunes en el aprendizaje básico son:</p>
+                <div class="comparativa">
+                    <ol>
+                        <li><b>Selector de tipo (Type Selector)</b></li>
+                        <p>Este selector aplica estilos a todos los elementos HTML del mismo tipos. Este código aplicará el color verde a todos los títulos (&lt;h1&gt;) de la página.</p>
+                        <div class="ejemplo">
+                            <p>
+                                p {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>
+                                }
+                            </p>
+                        </div>
+                        <li><b>Selector de clase (Class Selector)</b></li>
+                        <p>Los selectores de clase permiten aplicar estilos a elementos HTML conuna clase específica. Se utiliza un punto (.) para seleccionar unaclase. Cualquier elemento HTML que tenga el atributo class="mi-clase" tendrá un fondo amarillo. Por ejemplo:</p>
+                        <div class="ejemplo">
+                            <p>
+                                p {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow;<br>
+                                }
+                            </p>
+                        </div>
+                        <div class="ejemplo">
+                            <p>&lt;p class="mi-classe"&gt;Aquest paràgraf tindrà un fons groc.&lt;p&gt;</p>
+                        </div>
+                        <li><b>Selector de ID(ID Selector)</b></li>
+                        <p>El selector de id se utiliza para aplicar estilos a un único elemento HTMLque tenga un identificador específico. Se utiliza el símbolo de la almohada #. Este ejemplo centrará el texto del elemento que tenga id="mi-id". Es importante recordar que un ID debe ser único en la página.</p>
+                        <div class="ejemplo">
+                            <p>
+                                #mi-id {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                                }
+                            </p>
+                        </div>
+                        <li><b>Selector universal</b></li>
+                        <p>El selector universal (*) aplica estilos a todos los elementos de una página. Este ejemplo elimina los márgenes y rellenos de <b>todos los elementos</b> de la página, algo útil para establecer un estilo uniforme.</p>
+                        <div class="ejemplo">
+                            <p>
+                                * {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>
+                                }
+                            </p>
+                        </div>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article class="cajaoarticle">
+                <h2>Conceptos importantes</h2>
+                <div class="comparativa">
+                    <div>
+                        <h3>Herencia</h3>
+                        <p>Los hijos heredan los estilos de sus padres, así que no es necesario que escribas estilos para todo.</p>
+                    </div>
+                    <div class="ejemplo">
+                        <p>
+                            body {<br>
+                            color: blue;<br>
+                            }<br>
+                            h1{<br>
+                            color:blue;<br>
+                            }
+                        </p>
+                    </div>
+                </div>
+                <div class="comparativa">
+                    <div>
+                        <h3>Especificidad</h3>
+                        <p>Cuando hay conflictos de estilos, el navegador aplica sólo el de mayor especificidad.</p>
+                    </div>
+                    <div class="ejemplo">
+                        <p>
+                            .parrafo {<br>
+                            color: blue;<br>
+                            }<br>
+                            .article .parrafo{<br>
+                            color:red;<br>
+                            }
+                        </p>
+                    </div>
+                </div>
+                <div class="comparativa">
+                    <div>
+                        <h3>Cascada</h3>
+                        <p>Todo estilo sobrescribe uno anterior. La C de CSS significa Cascada.</p>
+                    </div>
+                    <div class="ejemplo">
+                        <p>
+                            .parrafo {<br>
+                            color: blue;<br>
+                            }<br>
+                            .parrafo{<br>
+                            color:red;<br>
+                            }
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
