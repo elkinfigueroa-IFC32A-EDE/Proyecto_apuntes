@@ -9,7 +9,6 @@ article{
     padding: 10px;
     margin: 15px;
     border-radius: 15px;
-    opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
 }
 
@@ -21,7 +20,6 @@ nav{
     padding: 5px;
     border-radius: 15px;
     justify-content: space-between;
-    opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
 }
 
@@ -30,20 +28,17 @@ nav{
     margin: 5px;
     padding: 15px;
     border-radius: 15px;
-    opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
 }
 
 .derecha{
     display: flex;
-    opacity: 0;
     margin: 0;
     padding: 0px;
 }
 
 .izquierda{
     display: flex;
-    opacity: 0;
     margin: 0;
     padding: 0px;
 }
@@ -54,8 +49,13 @@ nav{
     margin: 5px;
     padding: 10px;
     border-radius: 15px;
-    opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
+    height: fit-content;
+    width: stretch;
+}
+
+.ejemplo2{
+    text-align: center;
 }
 
 body{
@@ -69,23 +69,35 @@ a{
 
 h1{
     color: #EFF6E0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 p{
     font-size: 100%;
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 li{
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 ol{
     padding: 0px 15px 0px 15px;
+    padding-left: 25px;
     text-align: justify;
+}
+
+ul{
+    padding: 0px 15px 0px 15px;
+    padding-left: 25px;
+    text-align: justify;
+}
+
+.listagrande li::marker {
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .caja:nth-child(1) { animation-delay: 0.1s; }

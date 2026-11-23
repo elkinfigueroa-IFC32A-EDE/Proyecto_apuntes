@@ -9,7 +9,6 @@ section{
     padding: 10px;
     margin: 15px;
     border-radius: 15px;
-    opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
 }
 
@@ -21,7 +20,6 @@ nav{
     padding: 5px;
     border-radius: 15px;
     justify-content: space-between;
-    opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
 }
 
@@ -30,7 +28,6 @@ nav{
     margin: 5px;
     padding: 15px;
     border-radius: 15px;
-    opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
 }
 
@@ -38,14 +35,12 @@ nav{
     display: flex;
     margin: 0;
     padding: 0;
-    opacity: 1;
 }
 
 .izquierda{
     display: flex;
     margin: 0;
     padding: 0;
-    opacity: 1;
 }
 
 .ejemplo{
@@ -54,7 +49,6 @@ nav{
     margin: 5px;
     padding: 10px;
     border-radius: 15px;
-    opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
     height: fit-content;
     width: stretch;
@@ -72,6 +66,10 @@ nav{
 
 .ejemplo1{
     grid-row: span 2 / span 2;
+}
+
+.ejemplo2{
+    text-align: center;
 }
 
 .ejemplo3{
@@ -106,21 +104,30 @@ p{
     margin-bottom: 10px;
 }
 
-h2{
-    font-size: 25px;
-}
-
 li{
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-ol{
+ul{
     padding: 0px 15px 0px 15px;
+    padding-left: 25px;
     text-align: justify;
 }
 
+ol{
+    padding: 0px 15px 0px 15px;
+    padding-left: 25px;
+    text-align: justify;
+}
+
+.listagrande li::marker {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 img{
+    width: fit-content;
     border-radius: 15px;
 }
 
