@@ -13,15 +13,6 @@ section{
     animation: aparecer 0.8s ease-out forwards;
 }
 
-article{
-    background-color: #AEC3B0;
-    margin: 5px;
-    padding: 15px;
-    border-radius: 15px;
-    opacity: 0;
-    animation: aparecer 0.8s ease-out forwards;
-}
-
 nav{
     display: flex;
     background-color: #598392;
@@ -59,14 +50,14 @@ nav{
 
 .ejemplo{
     background-color: #01161E;
-    justify-self: center;
+
     color: #EFF6E0;
     margin: 5px;
     padding: 10px;
     border-radius: 15px;
     opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
-    width: fit-content;
+    width: auto;
     height: fit-content;
 }
 
