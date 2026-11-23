@@ -50,15 +50,14 @@ nav{
 
 .ejemplo{
     background-color: #01161E;
-
     color: #EFF6E0;
     margin: 5px;
     padding: 10px;
     border-radius: 15px;
     opacity: 0;
     animation: aparecer 0.8s ease-out forwards;
-    width: auto;
     height: fit-content;
+    width: stretch;
 }
 
 #casosespeciales2{
@@ -67,6 +66,8 @@ nav{
     grid-template-rows: repeat(2, 1fr);
     gap: 2px;
     text-align: left;
+    justify-content: center;
+    align-items: center;
 }
 
 .ejemplo1{
@@ -80,7 +81,8 @@ nav{
 
 .comparativa{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
     text-align: left;
 }
 
@@ -95,23 +97,31 @@ a{
 
 h1{
     color: #EFF6E0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 p{
     font-size: 100%;
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 25px;
 }
 
 li{
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 ol{
     padding: 0px 15px 0px 15px;
     text-align: justify;
+}
+
+img{
+    border-radius: 15px;
 }
 
 .caja:nth-child(1) { animation-delay: 0.1s; }
