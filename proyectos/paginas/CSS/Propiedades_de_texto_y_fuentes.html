@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introducción al CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../../CSS/stylecss_article.css">
+    </head>
+    <body>
+        <header>
+			<nav>
+                <div class="izquierda">
+                    <a href="../../llm.html">
+                        <div class="cajaoarticle">Volver al indice</div>
+                    </a>
+                    <a href="Sintaxis_basica_del_CSS.html">
+                        <div class="cajaoarticle">Pagina anterior</div>
+                    </a>
+                </div>
+                <div class="derecha">
+                    <a href="Margenes_rellenos_y_bordes.html">
+                        <div class="cajaoarticle">Pagina siguiente</div>
+                    </a>
+                </div>
+            </nav>
+		</header>
+        <article>
+            <h1>Propiedades de texto y fuentes</h1>
+            <p>El CSS permite controlar cómo se muestran los textos dentro de una página web. Con diversas propiedades podemos cambiar la fuente, el color, la alineación, el tamaño del texto y otros aspectos visuales para mejorar la legibilidad y la estética del contenido.</p>
+            <div class="cajaoarticle">
+                <ol class="listagrande">
+                    <li><h2>Propiedad de font-family</h2></li>
+                    <p>La propiedad font-family define el tipo de letra (tipografía) que se utilizará para un elemento de texto. Puedes especificar una o más fuentes, y el navegador aplicará la primera que esté disponible en el sistema del usuario.</p>
+                    <div class="ejemplo">
+                        <p>
+                            p {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: "Arial", sans-serif;<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Propiedad de font-size</h2></li>
+                    <p>La propiedad font-size controla el tamaño de la letra. Los valores se pueden definir en diversas unidades, como píxeles (px), ems (em), puntos (pt) o porcentajes (%).</p>
+                    <div class="ejemplo">
+                        <p>
+                            h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 32px;<br>
+                            }<br>
+                            p {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px;<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Propiedad de color</h2></li>
+                    <p>La propiedad color define el color del texto. Se pueden utilizar nombres de colores predefinidos, valores en hexadecimal, o el sistema de colores RGB o RGBA.</p>
+                    <div class="ejemplo">
+                        <p>
+                            p {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: red; /* Con nombre de color */<br>
+                            }<br>
+                            h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: #00FF00; /* Con código hexadecimal */<br>
+                            }<br>
+                            span {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: rgb(0, 0, 255); /* Con código RGB */<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Propiedad de text-align</h2></li>
+                    <p>La propiedad text-align se utiliza para controlar la alineación del texto dentro de un elemento. Los valores más comunes son left (izquierda), right (derecha), center (centrado) y justify (justificado).</p>
+                    <div class="ejemplo">
+                        <p>
+                            h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                            }<br>
+                            p {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: justify;<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Propiedad de font-weight</h2></li>
+                    <p>La propiedad font-weight controla el grosor de la letra. Los valores comunes son:</p>
+                    <ul>
+                        <li><b>normal:</b> por defecto.</li>
+                        <li><b>bold:</b> texto en negrita.</li>
+                        <li>Números entre 100 y 900, donde 400 es el valor por defecto y 700 representa la negrita.</li>
+                    </ul>
+                    <div class="ejemplo">
+                        <p>
+                            p {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Propiedad font-style</h2></li>
+                    <p>La propiedad font-style controla el estilo de la fuente, es decir, si el texto será normal o en cursiva. Los valores más comunes son:</p>
+                    <ul>
+                        <li><b>normal:</b> texto normal.</li>
+                        <li><b>italic:</b> texto en cursiva.</li>
+                        <li><b>oblique:</b> texto inclinado.</li>
+                    </ul>
+                    <div class="ejemplo">
+                        <p>
+                            span {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>
+                            }
+                        </p>
+                    </div>
+                </ol>
+            </div>
+        </article>
+    </body>
