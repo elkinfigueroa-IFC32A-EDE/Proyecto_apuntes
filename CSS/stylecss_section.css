@@ -54,16 +54,6 @@ nav{
     width: stretch;
 }
 
-#casosespeciales2{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2px;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
-}
-
 .ejemplo1{
     grid-row: span 2 / span 2;
 }
@@ -77,11 +67,35 @@ nav{
     grid-row-start: 2;
 }
 
-.comparativa{
+.comparativa1{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center ;
     align-items: center;
     text-align: left;
+}
+
+.comparativa2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+.comparativa3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+}
+
+#casosespeciales2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
 }
 
 body{
