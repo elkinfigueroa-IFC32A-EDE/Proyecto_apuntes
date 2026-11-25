@@ -24,61 +24,87 @@
             </nav>
 		</header>
         <section>
-            <h1>Márgenes, rellenos y bordes en CSS</h1>
-            <p>Los márgenes (margin), los rellenos (padding) y los bordes (border) forman parte del modelo de caja en CSS, que describe cómo se disponen los elementos en la página. Estas propiedades permiten ajustar el espacio exterior e interior de un elemento, así como definir sus límites visuales con un borde.</p>
+            <h1>Colores y fondos en CSS</h1>
+            <p>El CSS proporciona varias propiedades para aplicar colores y fondos a los elementos HTML. Estas propiedades son esenciales para mejorar el aspecto visual y la legibilidad de la página web.</p>
             <article class="cajaoarticle">
                 <ol class="listagrande">
-                    <li><h2>Márgenes (margin)</h2></li>
-                    <p>La propiedad margin controla el espacio exterior de un elemento, es decir, el espacio que hay entre un elemento y los demás elementos que lo rodean. Los márgenes se pueden definir de manera individual para cada uno de los cuatro lados del elemento (superior, derecho, inferior, izquierdo) o de manera global para todos los lados a la vez.</p>
+                    <li><h2>Propiedad color</h2></li>
+                    <p>Se utiliza para cambiar el color del texto dentro de un elemento. Puedes definir los colores de varias maneras:</p>
+                    <ul>
+                        <li><b>Nombres de colores:</b> utilizar nombres predefinidos como red, blue, green, etc.</li>
+                        <li><b>Colores hexadecimales:</b> utilizar un código hexadecimal que empieza por # seguido de seis caracteres (ejemplo: #FF0000 para rojo).</li>
+                        <li><b>RGB:</b> utilizar valores de rgb() donde cada componente (rojo, verde, azul) se especifica entre 0 y 255.</li>
+                        <li><b>RGBA:</b> igual que rgb(), pero con un cuarto valor para la opacidad (valores entre 0.0 y 1.0).</li>
+                    </ul>
                     <div class="ejemplo">
                         <p>
                             p {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px; /* Aplica un margen de 10 píxeles a todos los lados */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: blue; /* Utiliza un nombre de color */<br>
                             }<br>
                             h1 {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 20px; /* Margen superior de 20 píxeles */<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 10px; /* Margen inferior de 10 píxeles */<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 10px; /* Margen izquierdo de 10 píxeles */<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin-right: 10px; /* Margen derecho de 10 píxeles */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: #FF5733; /* Utiliza un código hexadecimal */<br>
+                            }<br>
+                            span {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: rgb(0, 255, 0); /* Utiliza el sistema RGB */<br>
+                            }<br>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: rgba(0, 0, 255, 0.5); /* Utiliza el sistema RGBA con opacidad */<br>
                             }
                         </p>
                     </div>
-                    <li><h2>Rellenos (padding)</h2></li>
-                    <p>La propiedad padding controla el espacio interior de un elemento, es decir, el espacio entre el contenido de un elemento (como texto o imágenes) y sus bordes. Igual que con los márgenes, los rellenos se pueden definir para todos los lados o para cada uno individualmente.</p>
+                    <li><h2>Propiedad background-color</h2></li>
+                    <p>Se utiliza para establecer el color de fondo de un elemento. Igual que la propiedad color, puedes definir colores utilizando nombres, valores hexadecimales, RGB o RGBA.</p>
+                    <div class="ejemplo">
+                        <p>
+                            body {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgray; /* Color de fondo gris claro */<br>
+                            }<br>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #00FF00; /* Color de fondo verde */<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Propiedad background</h2></li>
+                    <p>Es una forma abreviada de especificar varias propiedades de fondo a la vez, como el color, la imagen de fondo, la repetición, la posición, etc.</p>
                     <div class="ejemplo">
                         <p>
                             div {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px; /* Aplica un relleno de 20 píxeles a todos los lados */<br>
-                            }<br>
-                            h2 {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 15px; /* Aplica un relleno de 15 píxeles al lado izquierdo */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background: lightblue url("fons.jpg") no-repeat center cover;<br>
                             }
                         </p>
                     </div>
-                    <li><h2>Bordes (border)</h2></li>
-                    <p>La propiedad border se utiliza para añadir un borde alrededor de un elemento. Esta propiedad tiene varios subatributos:</p>
+                    <li><h2>Propiedad background-image</h2></li>
+                    <p>Esta propiedad permite añadir una imagen como fondo de un elemento. Puedes especificar la ubicación de la imagen con una URL.</p>
+                    <div class="ejemplo">
+                        <p>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-image: url("imatge-de-fons.jpg");<br>
+                            }
+                        </p>
+                    </div>
+                    <p>Si quieres que la imagen se repita o se muestre de otra manera, puedes utilizar otras propiedades complementarias:</p>
                     <ul>
-                        <li><b>Anchura del borde (border-width):</b> define el grosor del borde.</li>
-                        <li><b>Estilo del borde (border-style):</b> puede ser solid (sólido), dashed (rayado), dotted (punteado), etc.</li>
-                        <li><b>Color del borde (border-color):</b> especifica el color del borde.</li>
+                        <li>background-repeat: controla si la imagen de fondo se repite. Los valores pueden ser repeat, no-repeat, repeat-x (horizontalmente) o repeat-y (verticalmente).</li>
+                        <li>background-position: define la posición de la imagen de fondo (por ejemplo, center, top, left).</li>
+                        <li>background-size: permite ajustar el tamaño de la imagen (por ejemplo, cover o contain para adaptarse al tamaño del elemento).</li>
                     </ul>
                     <div class="ejemplo">
                         <p>
                             div {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid black; /* Borde de 2 píxeles, sólido y negro */<br>
-                            }<br>
-                            p {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;border: 1px dashed blue; /* Borde de 1 píxel, rayado y azul */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-image: url("fons.jpg");<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-position: center;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-size: cover;<br>
                             }
                         </p>
-                    </div>
+                    </div>                   
                 </ol>
             </article>
         </section>
         <section>
             <article class="cajaoarticle">
                 <h2>Ejemplo y unidades</h2>
-                <div class="comparativa">
+                <div class="comparativa3">
                     <div class="ejemplo">
                         <p>
                             &lt;!DOCTYPE html&gt;<br>
@@ -86,63 +112,49 @@
                             &lt;head&gt;<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Márgenes, Rellenos y Bordes&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Colores y Fondos en CSS&lt;/title&gt;<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.caja {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 20px; /* Margen de 20 píxeles a todos los lados */<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 15px; /* Relleno de 15 píxeles a todos los lados */<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid red; /* Borde de 3 píxeles, sólido y rojo */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgray; /* Color de fondo del cuerpo de la página */<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
                             <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.titulo {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-top: 30px; /* Margen superior de 30 píxeles */<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding-bottom: 10px; /* Relleno inferior de 10 píxeles */<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 2px dashed green; /* Borde inferior rayado y verde */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: darkblue; /* Color del texto del título */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #333; /* Color de texto con código hexadecimal */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: #FFD700; /* Fondo amarillo dorado */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fondo-imagen {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-image: url("fons.jpg");<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position: center;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-size : cover;<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
                             &lt;/head&gt;<br>
                             &lt;body&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="caja"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="titulo"&gt;Título con márgenes y bordes&lt;/h2&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Este es un párrafo dentro de una caja con márgenes, rellenos y un borde sólido.&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Colores y Fondos en CSS&lt;/h1&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Este es un párrafo con texto de color gris oscuro y fondo amarillo dorado.&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="fondo-imagen" style="height: 200px;"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este div tiene una imagen de fondo.<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                             &lt;/body&gt;<br>
                             &lt;/html&gt;
                         </p>
                     </div>
                     <div>
-                        <h3>Unidades comunes:</h3>
+                        <h3>Resumen de las propiedades vistas:</h3>
                         <ol>
-                            <li><b>Píxeles (px):</b></li>
-                            <ul>
-                                <li>Unidad fija, representa un punto en la pantalla.</li>
-                                <li>Ejemplo: margin: 20px;</li>
-                            </ul>
-                            <li><b>Ems (em):</b></li>
-                            <ul>
-                                <li>Unidad relativa al tamaño de la fuente del elemento padre.</li>
-                                <li>Ejemplo: padding: 2em; (2 veces el tamaño de la fuente).</li>
-                            </ul> 
-                            <li><b>Rems (rem):</b></li>
-                            <ul>
-                                <li>Unidad relativa al tamaño de la fuente del elemento raíz (html).</li>
-                                <li>Ejemplo: margin: 1.5rem; (1,5 veces el tamaño de la fuente raíz).</li>
-                            </ul> 
-                            <li><b>Porcentaje (%):</b></li>
-                            <ul>
-                                <li>Relativa al ancho o al alto del contenedor padre.</li>
-                                <li>Ejemplo: padding: 5%; (5% del ancho del contenedor).</li>
-                            </ul> 
-                            <li><b>Viewports (vw, vh):</b></li>
-                            <ul>
-                                <li>Relativa al tamaño de la ventana visible.</li>
-                                <li>Ejemplo: margin: 5vw; (5% del ancho del viewport).</li>
-                            </ul> 
-                            <li><b>Bordes (border-width):</b></li>
-                            <ul>
-                                <li>Grosores predeterminados: thin, medium, thick o valores como px.</li>
-                                <li>Ejemplo: border: thick solid black;</li>
-                            </ul>  
+                            <li><b>color:</b>define el color del texto.</li>
+                            <li><b>background-color:</b>establece el color de fondo de un elemento.</li>
+                            <li><b>background-image:</b>añade una imagen de fondo a un elemento.</li>
+                            <li><b>background-repeat:</b>controla la repetición de la imagen de fondo.</li>
+                            <li><b>background-position:</b>define la posición de la imagen de fondo.</li>
+                            <li><b>background-size:</b>ajusta el tamaño de la imagen de fondo.</li>
+                            <li><b>background:</b>propiedad abreviada que combina varias propiedades de fondo.</li>
                         </ol>
                     </div>
                 </div>
