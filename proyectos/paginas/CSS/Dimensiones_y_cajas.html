@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introducción al CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../../CSS/stylecss_section.css">
+    </head>
+    <body>
+        <header>
+			<nav>
+                <div class="izquierda">
+                    <a href="../../llm.html">
+                        <div class="cajaoarticle">Volver al indice</div>
+                    </a>
+                    <a href="Colores_y_fondo.html">
+                        <div class="cajaoarticle">Pagina anterior</div>
+                    </a>
+                </div>
+                <div class="derecha">
+                    <a href="Posicionamiento_basico.html">
+                        <div class="cajaoarticle">Pagina siguiente</div>
+                    </a>
+                </div>
+            </nav>
+		</header>
+        <section>
+            <h1>Dimensiones y cajas en CSS</h1>
+            <p>El CSS utiliza el modelo de caja para representar los elementos de una página web. Cada elemento se considera como una caja rectangular que contiene el contenido, rellenos, márgenes y bordes. Es importante entender este modelo porque controla cómo se distribuyen y se ajustan los elementos dentro de la página.</p>
+            <article class="cajaoarticle">
+                <h2>El modelo de caja se compone de cuatro partes principales</h2>
+                <ol>
+                    <li><b>Contenido:</b> el contenido real del elemento, como texto, imágenes u otros elementos.</li>
+                    <li><b>Relleno (padding):</b> el espacio entre el contenido y el borde.</li>
+                    <li><b>Borde (border):</b> el límite alrededor del relleno.</li>
+                    <li><b>Margen (margin):</b> el espacio externo entre el borde y otros elementos.</li>
+                </ol>
+            </article>
+            <article class="cajaoarticle">
+                <ol class="listagrande">
+                    <li><h2>Propiedades de dimensiones (width y height)</h2></li>
+                    <p>Las propiedades width (anchura) y height (altura) se utilizan para definir el tamaño de un elemento. Estos valores se pueden definir en unidades fijas como píxeles (px) o en unidades relativas como porcentajes (%), que dependen del tamaño de su elemento contenedor.</p>
+                    <div class="ejemplo">
+                        <p>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 300px; /* Anchura fija de 300 píxeles */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 150px; /* Altura fija de 150 píxeles */<br>
+                            }<br>
+                            .container {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 50%; /* Anchura del 50% del elemento contenedor */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: auto; /* La altura se ajusta automáticamente */<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>El modelo de caja en CSS</h2></li>
+                    <p>El modelo de caja establece cómo se calculan las dimensiones de un elemento teniendo en cuenta las propiedades de márgenes, rellenos y bordes. Por defecto, el tamaño de width y height solo afecta al contenido. Para incluir el relleno y el borde dentro de las dimensiones del elemento, se puede utilizar la propiedad box-sizing.</p>
+                    <h3>Propiedad box-sizing</h3>
+                    <p>La propiedad box-sizing controla cómo se calculan las dimensiones totales del elemento. Hay dos opciones principales:</p>
+                    <ul>
+                        <li><b>content-box</b> (valor por defecto): solo incluye el contenido en las dimensiones, mientras que los bordes y los rellenos se añaden aparte.</li>
+                        <li><b>border-box:</b> incluye el contenido, el relleno y el borde dentro de las dimensiones especificadas.</li>
+                    </ul>
+                    <div class="ejemplo">
+                        <p>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 200px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: 5px solid black;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Control del desbordamiento (overflow)</h2></li>
+                    <p>Cuando el contenido de un elemento es más grande que las dimensiones especificadas, el CSS ofrece la propiedad overflow para controlar cómo se muestra el contenido que desborda. Los valores más comunes son:</p>
+                    <ul>
+                        <li><b>visible:</b> el contenido que desborda se muestra fuera del elemento (valor por defecto).</li>
+                        <li><b>hidden:</b> el contenido que desborda se recorta y no se muestra.</li>
+                        <li><b>scroll:</b> muestra barras de desplazamiento, aunque el contenido no desborde.</li>
+                        <li><b>auto:</b> muestra barras de desplazamiento solo si el contenido desborda.</li>
+                    </ul>
+                    <div class="ejemplo">
+                        <p>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 150px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 100px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;overflow: scroll;<br>
+                            }
+                        </p>
+                    </div>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <article class="cajaoarticle">
+                <h2>Ejemplo y resumen</h2>
+                <div class="comparativa3">
+                    <div class="ejemplo">
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="es"&gt;<br>
+                            &lt;head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Dimensiones y Cajas en CSS&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.caja {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 200px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 5px solid darkblue;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 20px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.desbordamiento {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 150px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 100px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid red;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overflow: scroll;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="caja"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Esta es una caja con relleno y borde. Las dimensiones totales se calculan con box-sizing: border-box.<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="desbordamiento"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este es un ejemplo con desbordamiento. Si el contenido es más grande que el espacio disponible, se mostrarán barras de desplazamiento.<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Resumen de las propiedades vistas:</h3>
+                        <ol>
+                            <li><b>width y height:</b> definen las dimensiones de un elemento.</li>
+                            <li><b>box-sizing:</b> controla cómo se calculan las dimensiones totales de un elemento teniendo en cuenta el relleno y el borde.</li>
+                            <li><b>overflow:</b> controla cómo se maneja el contenido que desborda las dimensiones del elemento.</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
