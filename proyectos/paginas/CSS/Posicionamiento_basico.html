@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introducción al CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../../CSS/stylecss_section.css">
+    </head>
+    <body>
+        <header>
+			<nav>
+                <div class="izquierda">
+                    <a href="../../llm.html">
+                        <div class="cajaoarticle">Volver al indice</div>
+                    </a>
+                    <a href="Dimensiones_y_cajas.html">
+                        <div class="cajaoarticle">Pagina anterior</div>
+                    </a>
+                </div>
+                <div class="derecha">
+                    <a href="Diseño_basico_con_Flexbox.html">
+                        <div class="cajaoarticle">Pagina siguiente</div>
+                    </a>
+                </div>
+            </nav>
+		</header>
+        <section>
+            <h1>Posicionamiento básico en CSS</h1>
+            <p>El CSS ofrece diversas técnicas para controlar la ubicación de los elementos en una página web. La propiedad clave para el posicionamiento es position, que tiene varios valores para definir cómo se posiciona un elemento respecto a su elemento contenedor o al documento.</p>
+            <article class="cajaoarticle">
+                <ol class="listagrande">
+                    <li><h2>La propiedad position</h2></li>
+                    <p>La propiedad position permite especificar el método de posicionamiento de un elemento. Los valores más comunes son:</p>
+                    <ul>
+                        <li><b>static</b> (por defecto): los elementos se posicionan de manera normal, siguiendo el flujo del documento. No se puede ajustar manualmente con coordenadas.</li>
+                        <li><b>relative:</b> se posiciona el elemento respecto a su posición original en el flujo del documento. Se pueden utilizar coordenadas para moverlo ligeramente (arriba, abajo, izquierda o derecha).</li>
+                        <li><b>absolute:</b> el elemento se saca del flujo del documento y se posiciona respecto a su elemento contenedor más cercano que tenga una posición definida. Si no hay ningún contenedor definido, se posiciona respecto a la página.</li>
+                        <li><b>fixed:</b> el elemento se saca del flujo del documento y se posiciona respecto a la ventana del navegador. Se mantiene fijo incluso cuando el usuario se desplaza.</li>
+                        <li><b>sticky:</b> el elemento se comporta como relative hasta que llega a un punto en el desplazamiento de la página, después del cual se comporta como fixed.</li>
+                    </ul>
+                    <li><h2>Propiedades de posicionamiento (top, right, bottom, left)</h2></li>
+                    <p>Cuando se define la propiedad position como relative, absolute, fixed o sticky, puedes utilizar las propiedades top, right, bottom y left para especificar la distancia del elemento respecto a sus límites.</p>
+                    <p>Ejemplos:</p>
+                    <ul>
+                        <li>top: 10px; : mover el elemento 10 píxeles hacia abajo desde el límite superior.</li>
+                        <li>right: 20px; : mover el elemento 20 píxeles hacia la izquierda desde el límite derecho.</li>
+                    </ul>
+                    <div class="ejemplo">
+                        <p>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;top: 20px; /* Mueve el elemento 20 píxeles hacia abajo desde su posición original */<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;left: 30px; /* Mueve el elemento 30 píxeles hacia la derecha */<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Posicionamiento absoluto (position: absolute)</h2></li>
+                    <p>Con position: absolute, el elemento se saca completamente del flujo normal del documento y se posiciona respecto a su elemento contenedor más cercano con position: relative, absolute o fixed.</p>
+                    <div class="ejemplo">
+                        <p>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;top: 50px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;left: 100px;<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Posicionamiento fijo (position: fixed)</h2></li>
+                    <p>Los elementos con position: fixed se mantienen en una ubicación fija de la pantalla incluso cuando el usuario se desplaza. Se posicionan respecto a la ventana del navegador.</p>
+                    <div class="ejemplo">
+                        <p>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: fixed;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;top: 0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;left: 0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 100px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Posicionamiento pegajoso (position: sticky)</h2></li>
+                    <p>Los elementos con position: sticky se comportan como relative hasta que el usuario se desplaza por la página y llega a un punto especificado, después del cual el elemento se comporta como fixed.</p>
+                    <div class="ejemplo">
+                        <p>
+                            h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: sticky;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;top: 10px;<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Propiedad z-index</h2></li>
+                    <p>La propiedad z-index se utiliza para controlar el orden de superposición de los elementos posicionados (relative, absolute, fixed o sticky). Los valores más altos de z-index colocan el elemento delante de otros elementos con valores inferiores.</p>
+                    <div class="ejemplo">
+                        <p>
+                            div {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;z-index: 10; /* Este elemento se mostrará delante de los demás con z-index inferior */<br>
+                            }
+                        </p>
+                    </div>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <article class="cajaoarticle">
+                <h2>Ejemplo y resumen</h2>
+                <div class="comparativa3">
+                    <div class="ejemplo">
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="es"&gt;<br>
+                            &lt;head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Posicionamiento en CSS&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.relativo {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 20px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left: 30px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.absoluto {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 50px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left: 50px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgreen;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fijo {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: fixed;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right: 0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: coral;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.pegajoso {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: sticky;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 10px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="pegajoso"&gt;Título pegajoso&lt;/h1&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="relativo"&gt;Este elemento tiene position: relative.&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="absoluto"&gt;Este elemento tiene position: absolute.&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="fijo"&gt;Este elemento tiene position: fixed.&lt;/div&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Resumen de las propiedades vistas:</h3>
+                        <ol>
+                            <li><b>position: static:</b> posicionamiento por defecto.</li>
+                            <li><b>position: relative:</b> el elemento se mueve respecto a su posición original.</li>
+                            <li><b>position: absolute:</b> el elemento se posiciona respecto a su contenedor más cercano.</li>
+                            <li><b>position: fixed:</b> el elemento se fija respecto a la ventana del navegador.</li>
+                            <li><b>position: sticky:</b> el elemento se comporta como relative hasta que llega a una posición fijada, donde se mantiene pegado.</li>
+                            <li><b>z-index:</b> controla el orden de superposición de los elementos.</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
