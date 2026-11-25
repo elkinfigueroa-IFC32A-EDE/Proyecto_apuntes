@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Queries</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../../CSS/stylecss_section.css">
+    </head>
+    <body>
+        <header>
+			<nav>
+                <a href="../../llm.html">
+                    <div class="cajaoarticle">Volver al indice</div>
+                </a>
+                <a href="Diseño_basico_con_Flexbox.html">
+                    <div class="cajaoarticle">Pagina anterior</div>
+                </a>
+            </nav>
+		</header>
+        <section>
+            <h1>Media Queries (Introducción)</h1>
+            <p>Las Media Queries son una característica poderosa del CSS que permite adaptar el diseño de una página web en función de las características del dispositivo que la está visualizando, como el tamaño de la pantalla, la resolución o la orientación. Esta técnica es clave para implementar diseños responsivos que ofrecen una experiencia óptima tanto en dispositivos móviles como en tabletas u ordenadores de sobremesa.</p>
+            <article class="cajaoarticle">
+                <ol class="listagrande">
+                    <li><h2>¿Qué son las Media Queries?</h2></li>
+                    <p>Una media query es una condición que se añade al CSS para aplicar reglas de estilo solo cuando se cumplan ciertas características del dispositivo o de la ventana del navegador. El ejemplo más común es aplicar estilos diferentes en función de la anchura de la pantalla.</p>
+                    <div class="ejemplo">
+                        <p>
+                            @media (condición) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;/* Estilos que solo se aplicarán si se cumple la condición */<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Aplicación básica de Media Queries para pantallas de diferente tamaño</h2></li>
+                    <p>Un uso típico de las media queries es adaptar el diseño a diferentes anchuras de pantalla. Por ejemplo, puedes ajustar los estilos para pantallas grandes y pequeñas.</p>
+                    <div class="ejemplo">
+                        <p>
+                            /* Estilos para pantallas grandes (por encima de 768px de anchura) */<br>
+                            @media (min-width: 768px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            }<br>
+                            <br>
+                            /* Estilos para pantallas pequeñas (por debajo de 768px de anchura) */<br>
+                            @media (max-width: 767px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgreen;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Tipos de condiciones más comunes en las Media Queries</h2></li>
+                    <p>A continuación, veremos algunas de las condiciones más comunes que puedes utilizar dentro de las media queries:</p>
+                    <h3>a) Anchura de la pantalla (min-width y max-width)</h3>
+                    <p>Estas condiciones se utilizan para aplicar estilos cuando la ventana del navegador tiene una anchura mínima (min-width) o máxima (max-width).</p>
+                    <div class="ejemplo">
+                        <p>
+                            @media (min-width: 600px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;/* Estilos para pantallas con una anchura de 600 píxeles o más */<br>
+                            }<br>
+                            <br>
+                            @media (max-width: 600px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;/* Estilos para pantallas con una anchura de hasta 600 píxeles */<br>
+                            }
+                        </p>
+                    </div>
+                    <h3>b) Altura de la pantalla (min-height y max-height)</h3>
+                    <p>Estas condiciones funcionan de manera similar a las de anchura, pero se basan en la altura de la ventana.</p>
+                    <div class="ejemplo">
+                        <p>
+                            @media (min-height: 500px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;/* Estilos para pantallas con una altura de 500 píxeles o más */<br>
+                            }
+                        </p>
+                    </div>
+                    <h3>c) Orientación de la pantalla (orientation)</h3>
+                    <p>Puedes utilizar la condición orientation para aplicar estilos diferentes si la pantalla está en orientación horizontal (landscape) o vertical (portrait).</p>
+                    <div class="ejemplo">
+                        <p>
+                            @media (orientation: landscape) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;/* Estilos para dispositivos en orientación horizontal */<br>
+                            }<br>
+                            <br>
+                            @media (orientation: portrait) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;/* Estilos para dispositivos en orientación vertical */<br>
+                            }
+                        </p>
+                    </div>
+                    <li><h2>Uso de múltiples condiciones en una Media Query</h2></li>
+                    <p>Puedes combinar varias condiciones en una sola media query mediante las palabras clave and u only para especificar estilos muy concretos.</p>
+                    <div class="ejemplo">
+                        <p>
+                            @media (min-width: 600px) and (max-width: 1200px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;/* Estilos aplicados solo si la pantalla tiene entre 600 y 1200 píxeles de anchura */<br>
+                            }
+                        </p>
+                    </div>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <article class="cajaoarticle">
+                <h2>Ejemplo y resumen</h2>
+                <div class="comparativa3">
+                    <div class="ejemplo">
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="es"&gt;<br>
+                            &lt;head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Diseño Responsive&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.contenedor {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.elemento {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 5px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@media (min-width: 768px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.contenedor {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex-direction: row;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.elemento {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 24px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@media (max-width: 767px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.elemento {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 18px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="contenedor"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="elemento"&gt;Elemento 1&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="elemento"&gt;Elemento 2&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="elemento"&gt;Elemento 3&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Resumen de las propiedades vistas:</h3>
+                        <ol>
+                            <li><b>@media:</b> define una media query.</li>
+                            <li><b>min-width y max-width:</b> aplica estilos según la anchura mínima o máxima de la pantalla.</li>
+                            <li><b>min-height y max-height:</b> aplica estilos según la altura mínima o máxima de la pantalla.</li>
+                            <li><b>orientation:</b> aplica estilos según la orientación del dispositivo (vertical u horizontal).</li>
+                            <li><b>and:</b> combina múltiples condiciones en una media query.</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
